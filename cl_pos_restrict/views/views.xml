@@ -1,0 +1,26 @@
+<odoo>
+    <data>
+        <!-- Inherit Form View to Modify it -->
+        <record id="pos_config_view_form_inherited" model="ir.ui.view">
+            <field name="name">pos_config_view_form_inherited</field>
+            <field name="model">pos.config</field>
+            <field name="inherit_id" ref="point_of_sale.pos_config_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[hasclass('o_settings_container')][last()]/div[last()]" position="after">
+                    <div class="col-12 col-lg-6 o_setting_box" id="visible_backspace_btn">
+                        <div class="o_setting_left_pane">
+                            <field name="visible_backspace_btn"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="visible_backspace_btn" string="Visible Backspace Button"/>
+                            <div class="text-muted mb16">
+                                Toggle for backspace button in pos numpad.
+                            </div>
+                        </div>
+                    </div>
+                </xpath>
+
+            </field>
+        </record>
+    </data>
+</odoo>
